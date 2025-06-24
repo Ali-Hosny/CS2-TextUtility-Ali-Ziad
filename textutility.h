@@ -1,6 +1,6 @@
 #include <iostream>
 
-bool pallindromeCheck(char []);
-void toUpper(char []);
-void toLower(char []);
-int substringCount(char []);
+bool pallindromeCheck(char [],int);
+void toUpper(char [],int);
+void toLower(char [],int);
+int substringCount(char [],int);
