@@ -1,13 +1,33 @@
 #include <iostream>
 #include "textutility.h"
+using namespace std;
 
 const int N = 100000;
 int main()
 {
+    char input[1000];
+    int size;
+
+    
+
+    Array_input(input, size);
+
+    String_Reversal(input, size);
+
+    Array_input(input, size); 
+    cout << "Word count: " << Word_Count(input, size) << endl;
+
+    Array_input(input, size); 
+    cout << "Character count: " << Character_Count(input, size) << endl;
+
+    Array_input(input, size); 
+    Vowel_and_Consonant_Count(input, size);
+
+    Array_input(input, size); 
+    String_Reversal(input, size);
+
     char pallindrome[N];
-    std::cout << "Enter the string: ";
-    std::cin.getline(pallindrome, N);
-    std::cout << "You entered the Cstring: " << pallindrome << '\n';
+    Array_input(pallindrome, size);
     if (pallindromeCheck(pallindrome, size))
     {
         std::cout << "This is a pallindrome.\n";
@@ -18,28 +38,19 @@ int main()
     }
 
     char LowertoUpper[N];
-    std::cout << "Enter the string: ";
-
-    std::cin.getline(LowertoUpper, N);
-    std::cout << "You entered the Cstring: " << LowertoUpper << '\n';
+    Array_input(LowertoUpper, size);
 
     toUpper(LowertoUpper, size);
     std::cout << "The string from lowercase to uppercase: " << LowertoUpper << '\n';
 
     char UppertoLower[N];
-    std::cout << "Enter the string: ";
-    std::cin.getline(UppertoLower, N);
-    std::cout << "You entered the Cstring: " << UppertoLower << '\n';
-
+    Array_input(UppertoLower, size);
     toLower(UppertoLower, size);
     std::cout << "The string from uppercase to lowercase: " << UppertoLower << '\n';
 
     char String[N], SubString[N];
-    std::cout << "Enter the string: ";
-    std::cin.getline(String, N);
-    std::cout << "Enter the target substring: ";
-    std::cin.getline(SubString, N);
     int sizet;
-    std::cout << "Count of the occurences of the substring: " << substringOccurenceCount(String,SubString,size,sizet);
-    return 0;
+    Array_input(String, size);
+    Array_input(SubString, sizet);
+    std::cout << "Count of the occurences of the substring: " << substringOccurenceCount(String, SubString, size, sizet);
 }

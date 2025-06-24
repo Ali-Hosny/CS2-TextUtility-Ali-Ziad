@@ -1,5 +1,6 @@
 #include <iostream>
 #include "textutility.h"
+using namespace std;
 
 bool pallindromeCheck(char arr[], int size)
 {
@@ -32,7 +33,7 @@ void toLower(char arr[], int size)
         }
     }
 }
-int substringOccurenceCount(char arr[],char target[], int size ,int targetSize)
+int substringOccurenceCount(char arr[], char target[], int size ,int targetSize)
 {
     int cnt = 0;
     for (int i = 0; i < size; i++)
@@ -42,7 +43,7 @@ int substringOccurenceCount(char arr[],char target[], int size ,int targetSize)
             bool ok = true;
             for (int j = 0; j < targetSize && i + targetSize < size; j++)
             {
-                if(arr[j] != target[j])
+                if(arr[i+j] != target[j])
                 {
                     ok = false;
                     break;
@@ -52,4 +53,88 @@ int substringOccurenceCount(char arr[],char target[], int size ,int targetSize)
         }
     }
     return cnt;
+}
+
+void Array_input(char a[], int &size){
+
+    cout << "Enter the Text" << endl;
+    cin.getline(a,1000);
+
+    for(int i=0; i<10000; i++){
+
+        if(a[i] == '\0'){
+            size = i;
+            break;
+        }
+    }
+
+}
+
+int Word_Count(char a[], int size){
+
+    int count=0;
+    bool inWord = false;
+
+    for(int i = 0; i < size; i++){
+        if (a[i] != ' ' && a[i] != '\0' && !inWord){
+            inWord = true;
+            count++;
+        } else if (a[i] == ' '){
+            inWord = false;
+        }
+    }
+
+    return count;
+}
+
+int Character_Count(char a[], int size){
+
+    int count=0;
+
+    for(int i=0; i<size; i++){
+
+        if(a[i] != ' ' && a[i] != '\0'){
+            
+            count++;
+        }
+    }
+    return count;
+}
+
+void Vowel_and_Consonant_Count(char a[], int size){
+
+    int vowelCount=0;
+    int consonantCount=0;
+
+    for(int i=0; i<size; i++) { 
+        if(a[i] == 'a' || a[i] == 'A' || a[i] == 'e' || a[i] == 'E' || a[i] == 'i' || a[i] == 'I' || a[i] == 'o' || a[i] == 'O' || a[i] == 'u' || a[i] == 'U'){
+
+            vowelCount++;
+        }
+        else if((a[i] >= 'a' && a[i] <= 'z') || (a[i] >= 'A' && a[i] <= 'Z')) consonantCount++;
+    }
+
+    cout << "Vowel Count: " << vowelCount << endl;
+    cout << "Consonant Count: " << consonantCount << endl;
+}
+
+
+void String_Reversal(char a[], int size){
+
+    char temp;
+
+    for(int i=0; i<size/2; i++) {
+
+        temp=a[i];
+        a[i]=a[size-i-1];
+        a[size-i-1]=temp;
+    }
+
+    cout << "Reversed String: ";
+    for(int i=0; i<size; i++){
+
+        cout << a[i];
+    }
+    cout << endl;
+
 }
