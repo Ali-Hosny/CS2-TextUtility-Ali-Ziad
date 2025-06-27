@@ -2,6 +2,22 @@
 #include "textutility.h"
 using namespace std;
 
+
+void Array_input(char a[], int &size){
+
+    cout << "Enter the Text: ";
+    
+    cin.getline(a,1000);
+
+    for(int i=0; i<1000; i++){
+
+        if(a[i] == '\0'){
+            size = i;
+            break;
+        }
+    }
+}
+
 bool pallindromeCheck(char arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -53,21 +69,6 @@ int substringOccurenceCount(char arr[], char target[], int size ,int targetSize)
         }
     }
     return cnt;
-}
-
-void Array_input(char a[], int &size){
-
-    cout << "Enter the Text" << endl;
-    cin.getline(a,1000);
-
-    for(int i=0; i<10000; i++){
-
-        if(a[i] == '\0'){
-            size = i;
-            break;
-        }
-    }
-
 }
 
 int Word_Count(char a[], int size){
