@@ -10,8 +10,8 @@ int main()
     char ans;
     int choice;
     do{
-
-        cout << "Choose what you want to do with a text: " << endl << endl;
+        cout << "           Main Menu" << endl;
+        cout << "-------------------------------" << endl;
         cout << "1. Word Count" << endl;
         cout << "2. Character Count" << endl;
         cout << "3. Vowel and Consonant Count" << endl;
@@ -19,8 +19,11 @@ int main()
         cout << "5. Palindrome Check" << endl;
         cout << "6. Case Conversion to Uppercase" << endl;
         cout << "7. Case Conversion to Lowercase" << endl;
-        cout << "8. Substring Occurrence Count" << endl << endl;
-        std::cin >> choice;
+        cout << "8. Substring Occurrence Count" << endl;
+        cout << "9. Cypher a sentence.";
+        cout << "10. Decypher a sentence." << endl;
+        cout << "Choose what you want to do with a text: ";
+        cin >> choice;
         cin.ignore(); 
 
         switch(choice){
