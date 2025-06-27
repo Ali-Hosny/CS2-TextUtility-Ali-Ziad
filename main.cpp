@@ -21,7 +21,7 @@ int main()
         cout << "6. Case Conversion to Uppercase" << endl;
         cout << "7. Case Conversion to Lowercase" << endl;
         cout << "8. Substring Occurrence Count" << endl;
-        cout << "9. Cypher a sentence.";
+        cout << "9. Cypher a sentence." << endl;
         cout << "10. Decypher a sentence." << endl;
         cout << "Choose what you want to do with a text: ";
         cin >> choice;
@@ -81,28 +81,30 @@ int main()
             break;
         case 9:
             char Cypher[N], Keyword[N];
-            int sizet;
             Array_input(Cypher, size);
             Array_input(Keyword, sizet);
             toLower(Cypher, size);
             toLower(Keyword, sizet);
-            cout << "Cyphered text after using the keyword: " Cypherize(Cypher, size, Keyword, sizet) << endl;
+            std::cout << "Cyphered text after using the keyword: ";
+            Cypherize(Cypher, size, Keyword, sizet);
+            cout << endl;
             break;
         case 10:
-            char DeCypher[N], Keyword[N];
-            int sizet;
+            char DeCypher[N], Keyword2[N];
             Array_input(DeCypher, size);
-            Array_input(Keyword, sizet);
+            Array_input(Keyword2, sizet);
             toLower(DeCypher, size);
-            toLower(Keyword, sizet);
-            cout << "Cyphered text after using the keyword: " Decypherize(Cypher, size, Keyword, sizet) << endl;
+            toLower(Keyword2, sizet);
+            std::cout << "Decyphered text after using the keyword: ";
+            Decypherize(DeCypher, size, Keyword2, sizet); 
+            cout << endl;
             break;
         default:
             cout << "Please Enter a right input!" << endl;
             continue;
         }
 
-        cout << "Do you want to play again? (y/n)" << endl;
+        cout << "Do you want to try again? (y/n)" << endl;
         cin >> ans;
     } while (ans == 'y' || ans == 'Y');
 }

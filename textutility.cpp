@@ -139,44 +139,44 @@ void String_Reversal(char a[], int size){
 
 }
 
-void Cypherize(char a[],int sa,char k[],int sk)
+void Cypherize(char input[],int sizeInput,char key[],int sizeKey)
 {
-    char longg [sa];
+    char fullKey [sizeInput];
     int j = 0;
-    for (int i = 0; i < sa; i++)
+    for (int i = 0; i < sizeInput; i++)
     {
-        longg[i] = k[j++];
-        if(j == sa)
+        fullKey[i] = key[j++];
+        if(j == sizeKey)
         {
             j = 0;
         }
     }    
-    for (int i = 0; i < sa; i++)
+    for (int i = 0; i < sizeInput; i++)
     {
-        if(a[i] != ' ')
-            a[i] = (a[i] + longg[i])%26 + 97;    
-        cout << a[i];
+        if(input[i] != ' ')
+            input[i] = ((input[i]-'a') + (fullKey[i]-'a'))%26 + 'a';    
+        cout << input[i];
     }
     
 }
-void Decypherize(char a[],int sa,char k[],int sk)
+void Decypherize(char input[],int sizeInput,char key[],int sizeKey)
 {
     
-    char longg [sa];
+    char fullKey [sizeInput];
     int j = 0;
-    for (int i = 0; i < sa; i++)
+    for (int i = 0; i < sizeInput; i++)
     {
-        longg[i] = k[j++];
-        if(j == sa)
+        fullKey[i] = key[j++];
+        if(j == sizeKey)
         {
             j = 0;
         }
     }    
-    for (int i = 0; i < sa; i++)
+    for (int i = 0; i < sizeInput; i++)
     {
-        if(a[i] != ' ')
-            a[i] = (a[i] - longg[i] + 26)%26 + 97;    
-        cout << a[i];
+        if(input[i] != ' ')
+            input[i] = ((input[i]- 'a') - (fullKey[i] - 'a') + 26)%26 + 'a';    
+        cout << input[i];
     }
 }
 
