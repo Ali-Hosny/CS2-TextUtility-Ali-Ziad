@@ -9,5 +9,5 @@ The user can do multiple actions on a text during one run just by answering yes 
 
 BUILD :
 
-The project consist mainly of three files; textutility.h for the headers, textutility.cpp for the functions' definitions, and main.cpp for the implementation
+The project consist mainly of three files; textutility.h for the headers, textutility.cpp for the functions' definitions, and main.cpp for the implementation.
 There is a menu that is displayed to the user to choose from, with a switch algorithm to implement a specific function according to the user's choice.
