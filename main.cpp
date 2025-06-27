@@ -9,7 +9,8 @@ int main()
     char input[1000];
     char ans;
     int choice;
-    do{
+    do
+    {
         cout << "           Main Menu" << endl;
         cout << "-------------------------------" << endl;
         cout << "1. Word Count" << endl;
@@ -24,70 +25,84 @@ int main()
         cout << "10. Decypher a sentence." << endl;
         cout << "Choose what you want to do with a text: ";
         cin >> choice;
-        cin.ignore(); 
+        cin.ignore();
 
-        switch(choice){
-
-            case 1: {
-                Array_input(input, size);
-                cout << "Word count: " << Word_Count(input, size) << endl;
-                break;
-            }
-            case 2: {
-                Array_input(input, size); 
-                cout << "Character count: " << Character_Count(input, size) << endl;
-                break;
-            }
-            case 3: {
-                Array_input(input, size); 
-                Vowel_and_Consonant_Count(input, size);
-                break;
-            }
-            case 4: {
-                Array_input(input, size); 
-                String_Reversal(input, size);
-                break;
-            }
-            case 5: {
-                char pallindrome[N];
-                Array_input(pallindrome, size);
-                if (pallindromeCheck(pallindrome, size))
-                    {
-                        cout << "This is a pallindrome.\n";
-                    }
-                else
-                    {
-                        std::cout << "This is not a pallindrome.\n\n";
-                    }
-                    break;
-            }
-            case 6: {
-                char LowertoUpper[N];
-                Array_input(LowertoUpper, size);
-                toUpper(LowertoUpper, size);
-                std::cout << "The string from lowercase to uppercase: " << LowertoUpper << '\n';
-                break;
-            }
-            case 7: {
-                char UppertoLower[N];
-                Array_input(UppertoLower, size);
-                toLower(UppertoLower, size);
-                std::cout << "The string from uppercase to lowercase: " << UppertoLower << '\n';
-                break;
-            }
-            case 8: {
-                char String[N], SubString[N];
-                int sizet;
-                Array_input(String, size);
-                Array_input(SubString, sizet);
-                std::cout << "Count of the occurences of the substring: " << substringOccurenceCount(String, SubString, size, sizet);
+        switch (choice)
+        {
+        case 1:
+            Array_input(input, size);
+            cout << "Word count: " << Word_Count(input, size) << endl;
             break;
+        case 2:
+            Array_input(input, size);
+            cout << "Character count: " << Character_Count(input, size) << endl;
+            break;
+        case 3:
+            Array_input(input, size);
+            Vowel_and_Consonant_Count(input, size);
+            break;
+        case 4:
+            Array_input(input, size);
+            String_Reversal(input, size);
+            break;
+        case 5:
+            char pallindrome[N];
+            Array_input(pallindrome, size);
+            if (pallindromeCheck(pallindrome, size))
+            {
+                cout << "This is a pallindrome.\n";
             }
+            else
+            {
+                std::cout << "This is not a pallindrome.\n\n";
+            }
+            break;
+
+        case 6:
+            char LowertoUpper[N];
+            Array_input(LowertoUpper, size);
+            toUpper(LowertoUpper, size);
+            std::cout << "The string from lowercase to uppercase: " << LowertoUpper << '\n';
+            break;
+
+        case 7:
+            char UppertoLower[N];
+            Array_input(UppertoLower, size);
+            toLower(UppertoLower, size);
+            std::cout << "The string from uppercase to lowercase: " << UppertoLower << '\n';
+            break;
+
+        case 8:
+            char String[N], SubString[N];
+            int sizet;
+            Array_input(String, size);
+            Array_input(SubString, sizet);
+            std::cout << "Count of the occurences of the substring: " << substringOccurenceCount(String, SubString, size, sizet);
+            break;
+        case 9:
+            char Cypher[N], Keyword[N];
+            int sizet;
+            Array_input(Cypher, size);
+            Array_input(Keyword, sizet);
+            toLower(Cypher, size);
+            toLower(Keyword, sizet);
+            cout << "Cyphered text after using the keyword: " Cypherize(Cypher, size, Keyword, sizet) << endl;
+            break;
+        case 10:
+            char DeCypher[N], Keyword[N];
+            int sizet;
+            Array_input(DeCypher, size);
+            Array_input(Keyword, sizet);
+            toLower(DeCypher, size);
+            toLower(Keyword, sizet);
+            cout << "Cyphered text after using the keyword: " Decypherize(Cypher, size, Keyword, sizet) << endl;
+            break;
+        default:
+            cout << "Please Enter a right input!" << endl;
+            continue;
         }
 
-    cout << "Do you want to play again? (y/n)" << endl;
-    cin >> ans;
-    }while(ans == 'y' || ans == 'Y');
-
-    
+        cout << "Do you want to play again? (y/n)" << endl;
+        cin >> ans;
+    } while (ans == 'y' || ans == 'Y');
 }

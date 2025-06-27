@@ -5,7 +5,7 @@ using namespace std;
 
 void Array_input(char a[], int &size){
 
-    cout << "Enter the Text: ";
+    cout << "Enter the text: ";
     
     cin.getline(a,1000);
 
@@ -121,7 +121,6 @@ void Vowel_and_Consonant_Count(char a[], int size){
 
 
 void String_Reversal(char a[], int size){
-
     char temp;
 
     for(int i=0; i<size/2; i++) {
@@ -139,3 +138,45 @@ void String_Reversal(char a[], int size){
     cout << endl;
 
 }
+
+void Cypherize(char a[],int sa,char k[],int sk)
+{
+    char longg [sa];
+    int j = 0;
+    for (int i = 0; i < sa; i++)
+    {
+        longg[i] = k[j++];
+        if(j == sa)
+        {
+            j = 0;
+        }
+    }    
+    for (int i = 0; i < sa; i++)
+    {
+        if(a[i] != ' ')
+            a[i] = (a[i] + longg[i])%26 + 97;    
+        cout << a[i];
+    }
+    
+}
+void Decypherize(char a[],int sa,char k[],int sk)
+{
+    
+    char longg [sa];
+    int j = 0;
+    for (int i = 0; i < sa; i++)
+    {
+        longg[i] = k[j++];
+        if(j == sa)
+        {
+            j = 0;
+        }
+    }    
+    for (int i = 0; i < sa; i++)
+    {
+        if(a[i] != ' ')
+            a[i] = (a[i] - longg[i] + 26)%26 + 97;    
+        cout << a[i];
+    }
+}
+
