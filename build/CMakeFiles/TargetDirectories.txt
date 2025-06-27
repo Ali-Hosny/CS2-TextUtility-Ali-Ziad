@@ -1,0 +1,3 @@
+C:/Users/aliho/CS2-TextUtility-Ali-Ziad/build/CMakeFiles/trial.dir
+C:/Users/aliho/CS2-TextUtility-Ali-Ziad/build/CMakeFiles/edit_cache.dir
+C:/Users/aliho/CS2-TextUtility-Ali-Ziad/build/CMakeFiles/rebuild_cache.dir
