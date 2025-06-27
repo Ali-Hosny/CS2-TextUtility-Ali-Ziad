@@ -84,6 +84,12 @@ int main()
 
     cout << "Do you want to play again? (y/n)" << endl;
     cin >> ans;
+        do{
+            if (ans != 'y' && ans != 'n' && ans != 'Y' && ans != 'N'){
+                cout << "Invalid input. Please enter y or n." << endl;
+                cin >> ans;
+            }
+        }while(ans != 'y' && ans != 'n' && ans != 'Y' && ans != 'N');
     }while(ans == 'y' || ans == 'Y');
 
     
