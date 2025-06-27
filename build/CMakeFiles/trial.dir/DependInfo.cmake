@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/aliho/CS2-TextUtility-Ali-Ziad/main.cpp" "CMakeFiles/trial.dir/main.cpp.obj" "gcc" "CMakeFiles/trial.dir/main.cpp.obj.d"
-  "C:/Users/aliho/CS2-TextUtility-Ali-Ziad/textutility.cpp" "CMakeFiles/trial.dir/textutility.cpp.obj" "gcc" "CMakeFiles/trial.dir/textutility.cpp.obj.d"
+  "/c/Users/aliho/CS2-TextUtility-Ali-Ziad/main.cpp" "CMakeFiles/trial.dir/main.cpp.o" "gcc" "CMakeFiles/trial.dir/main.cpp.o.d"
+  "/c/Users/aliho/CS2-TextUtility-Ali-Ziad/textutility.cpp" "CMakeFiles/trial.dir/textutility.cpp.o" "gcc" "CMakeFiles/trial.dir/textutility.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,3 +1,1 @@
-C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\trial.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\trial.dir/objects.a @CMakeFiles\trial.dir\objects1.rsp
-C:\msys64\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\trial.dir/objects.a -Wl,--no-whole-archive -o trial.exe -Wl,--out-implib,libtrial.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\trial.dir\linkLibs.rsp
+/ucrt64/bin/c++.exe -Wl,--enable-auto-import CMakeFiles/trial.dir/main.cpp.o CMakeFiles/trial.dir/textutility.cpp.o -o trial.exe -Wl,--out-implib,libtrial.dll.a -Wl,--major-image-version,0,--minor-image-version,0
